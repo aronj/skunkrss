@@ -1,0 +1,26 @@
+extends layout
+
+block content
+  h1 skunkrss
+  if asd
+    p you cant do that #{asd} shit
+  P Skriv in ett skunk- eller grupp-id
+
+
+    p(style='display:inline-block') skunk.cc/profile.php?id=
+    input(autofocus id='skunk-input', type='text', placeholder='id', data-baseurl='diary/')
+    a
+      img(src='images/rss_128px.png', height='20')
+    br
+    p(style='display:inline-block') skunk.cc/groupMessages.php?id=
+    input(autofocus id='group-input', type='text', placeholder='id', data-baseurl='group/')
+    a
+      img(src='images/rss_128px.png', height='20')
+
+  #results
+    ul
+
+  #rss
+
+  script(async defer src='//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js', type='text/javascript')
+  script(async defer src='javascripts/main.js', type='text/javascript')
